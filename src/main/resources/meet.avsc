@@ -1,0 +1,155 @@
+{
+  "name": "MyClass",
+  "type": "record",
+  "namespace": "com.acme.avro",
+  "fields": [
+    {
+      "name": "venue",
+      "type": {
+        "name": "venue",
+        "type": "record",
+        "fields": [
+          {
+            "name": "venue_name",
+            "type": "string"
+          },
+          {
+            "name": "lon",
+            "type": "float"
+          },
+          {
+            "name": "lat",
+            "type": "float"
+          },
+          {
+            "name": "venue_id",
+            "type": "int"
+          }
+        ]
+      }
+    },
+    {
+      "name": "visibility",
+      "type": "string"
+    },
+    {
+      "name": "response",
+      "type": "string"
+    },
+    {
+      "name": "guests",
+      "type": "int"
+    },
+    {
+      "name": "member",
+      "type": {
+        "name": "member",
+        "type": "record",
+        "fields": [
+          {
+            "name": "member_id",
+            "type": "int"
+          },
+          {
+            "name": "photo",
+            "type": "string"
+          },
+          {
+            "name": "member_name",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "rsvp_id",
+      "type": "int"
+    },
+    {
+      "name": "mtime",
+      "type": "long"
+    },
+    {
+      "name": "event",
+      "type": {
+        "name": "event",
+        "type": "record",
+        "fields": [
+          {
+            "name": "event_name",
+            "type": "string"
+          },
+          {
+            "name": "event_id",
+            "type": "string"
+          },
+          {
+            "name": "time",
+            "type": "long"
+          },
+          {
+            "name": "event_url",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "group",
+      "type": {
+        "name": "group",
+        "type": "record",
+        "fields": [
+          {
+            "name": "group_topics",
+            "type": {
+              "type": "array",
+              "items": {
+                "name": "group_topics_record",
+                "type": "record",
+                "fields": [
+                  {
+                    "name": "urlkey",
+                    "type": "string"
+                  },
+                  {
+                    "name": "topic_name",
+                    "type": "string"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "group_city",
+            "type": "string"
+          },
+          {
+            "name": "group_country",
+            "type": "string"
+          },
+          {
+            "name": "group_id",
+            "type": "int"
+          },
+          {
+            "name": "group_name",
+            "type": "string"
+          },
+          {
+            "name": "group_lon",
+            "type": "float"
+          },
+          {
+            "name": "group_urlname",
+            "type": "string"
+          },
+          {
+            "name": "group_lat",
+            "type": "float"
+          }
+        ]
+      }
+    }
+  ]
+}
